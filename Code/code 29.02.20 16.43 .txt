@@ -1,0 +1,81 @@
+# Créer un Bot Discord en Java Script
+
+## Créer par Jujugin (un débutant)
+
+**Du coup on vas commencer par le commencement :**
+
+- Telecharger [Node ](https://nodejs.org/fr/ "Node ")
+[![Node JS](https://zupimages.net/up/20/09/n7h4.jpg "Node JS")](https://zupimages.net/up/20/09/n7h4.jpg "Node JS")
+
+- Telecharger un éditeur de texte comme [Visual Studio Code](https://code.visualstudio.com/ "Visual Studio Code") ou [Sublime Text](https://www.sublimetext.com/ "Sublime Text")
+
+[![Visual Studio Code](https://zupimages.net/up/20/09/axvq.png "Visual Studio Code")](https://zupimages.net/up/20/09/axvq.png "Visual Studio Code")
+
+-  Après avoir telecharger un editeur de texte créer un repertoire sur votre PC 
+
+[![Illustration](https://zupimages.net/up/20/09/updv.png "Illustration")](https://zupimages.net/up/20/09/updv.png "Illustration")
+
+
+------------
+
+**Ensuite allez sur l'éditeur de texte que vous avez choisis :**
+
+**Si vous êtes sur Visual Studio Code (celui que je vous conseille le plus)**
+
+- Allez sur Fichier - Ouvrir le dossier - Et vous prenez le fichier que vous venez de créer.
+
+[![Illustration](https://zupimages.net/up/20/09/wlh3.png "Illustration")](https://zupimages.net/up/20/09/wlh3.png "Illustration")
+
+**- Maintenant créer un fichier en faisant "Clic Droit" puis "Nouveau Fichier" et nommez le "index.js" **
+
+** - Ensuite allez sur le terminal visual en appuyant sur le bouton panneau en bas a gauche **
+
+[![Terminal](https://zupimages.net/up/20/09/s15g.png "Terminal")](https://zupimages.net/up/20/09/s15g.png "Terminal")
+
+** -  Une fois dans le terminal vous taperez ces commandes : **
+
+`npm init`
+
+** -  Vous suivrez les instructions puis ensuite :**
+
+`npm install`
+
+** -  Puis :**
+
+`npm i discord.js --save`
+
+** -  Et voila ! Vous avez tout les modules qui vont vous permettre de commencer un bot discord ! Donc pour commencez aller dans le index.js et mettez ces ligne de codes :**
+
+`const Discord = require('discord.js')`
+`const client = new Discord.Client();`
+`var prefix = "TON-PREFIX"`
+
+`client.login("TON-TOKEN");`
+
+**Pour avoir le [Token de ton bot](https://discordapp.com/developers/applications "Token de bot") vas sur Discord Developper et créer une nouvelle application puis allez dans la categorie "Bot" et mettez "Build a Bot" et mettez "copy token" puis mettez le dans le client.login dans le index.js**
+
+**Pour avoir votre première commande :**
+
+`client.on('message', message => {`
+  `if (message.content === (prefix + "ping")) {`
+    `message.channel.send("Pong !")`
+ ` }}`
+`)`
+
+Pour recevoir le message "pong !" mettez votre prefix + ping
+
+**Pour inviter votre bot allez sur [Discord Permission Calculator](https://discordapi.com/permissions.html "Discord Permission Calculator") et mettez l'id de votre que vous pouvez retrouver sur [Discord Developper](https://discordapp.com/developers/applications "Token de bot")**
+
+
+------------
+
+Autre : Pour avoir une notification dès que le bot se lance rajouter ce code :
+
+`client.on('ready' , () => {`
+`console.log("Lancé")`
+`})`
+
+
+------------
+
+Update du Site normalement Dimanche 29/02/2020 pour vous permettre de faire encore plus de choses avec discord.js !
